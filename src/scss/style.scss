@@ -1,7 +1,11 @@
+// libs
+@use "/src/scss/libs/grids-min.css";
+@use "/src/scss/libs/grids-responsive-min.css";
 // components
-@use "/src//scss/ui/title.scss";
-@use "/src//scss/ui/button.scss";
+@use "/src/scss/ui/title.scss";
+@use "/src/scss/ui/button.scss";
 @use "/src/scss/blocks/header.scss";
 // sections
 @use "/src/scss/base/base.scss";
 @use "/src/scss/blocks/promo.scss";
+@use "/src/scss/blocks/activities.scss";
