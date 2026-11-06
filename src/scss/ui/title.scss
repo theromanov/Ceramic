@@ -1,0 +1,33 @@
+@use "/src/scss/base/variables.scss" as *;
+@use "/src/scss/base/mixins.scss" as *;
+
+.title-h1,
+.title-h2,
+.title-h3 {
+  @include title;
+}
+
+.title-h1,
+.title-h2 {
+  @media screen and (min-width: 360px) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
+}
+
+.title-h3 {
+  @media screen and (min-width: 360px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}

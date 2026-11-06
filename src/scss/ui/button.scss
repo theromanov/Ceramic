@@ -1,0 +1,19 @@
+@use "/src/scss/base/variables.scss" as *;
+@use "/src/scss/base/mixins.scss" as *;
+
+.btn {
+  @include button;
+
+  @media screen and (min-width: 360px) {
+    width: 230px;
+    min-height: 50px;
+    padding: 13px 10px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 330px;
+    min-height: 60px;
+    // text
+    padding: 18px 10px;
+  }
+}

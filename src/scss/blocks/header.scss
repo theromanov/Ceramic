@@ -1,0 +1,157 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.header {
+  position: relative;
+  padding-top: 50px;
+  background-color: var(--light);
+
+  &__menu {
+    padding: 50px 0 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--light);
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1000;
+    transition: 0.5s all;
+
+    &_active {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+
+    &-close {
+      height: 14px;
+      width: 14px;
+
+      &-icon {
+        max-width: 100%;
+        cursor: pointer;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      padding-left: 14px;
+      row-gap: 25px;
+
+      &-item {
+        list-style-type: none;
+      }
+
+      &-link {
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--dark);
+        text-decoration: none;
+      }
+    }
+  }
+  &__burger {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 35px;
+    cursor: pointer;
+
+    &-item {
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: cover;
+    }
+
+    &-icons {
+      width: 55px;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+      }
+
+      img {
+        max-width: 20px;
+      }
+    }
+  }
+  &__nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+    &__burger {
+      visibility: hidden;
+    }
+
+    &__nav {
+      display: block;
+      &-menu {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        column-gap: 30px;
+      }
+
+      &-item {
+        list-style-type: none;
+      }
+
+      &-link {
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--dark);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header {
+    padding-top: 40px;
+
+    &__top {
+      &-img {
+        max-width: 150px;
+        max-height: 150px;
+      }
+    }
+
+    &__nav {
+      &-menu {
+        margin-top: 36px;
+        column-gap: 60px;
+      }
+    }
+  }
+}

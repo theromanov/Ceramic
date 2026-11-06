@@ -36,3 +36,25 @@ img {
 html {
   font-family: var(--font-family), sans-serif;
 }
+
+::selection {
+  background-color: var(--ceramic);
+}
+
+.container {
+  @media screen and (min-width: 360px) {
+    padding: 0 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 0 240px;
+  }
+}
