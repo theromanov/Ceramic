@@ -96,7 +96,7 @@
                     <div class="promo__cta">
                         <img src="/src/img/promo/ceramic-vase.jpg" alt="ceramic-vase" class="promo__cta-img">
 
-                        <a href="#" class="btn">shop now</a>
+                        <a href="#" class="btn-shop">shop now</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
 
         <section class="activities">
             <div class="container">
-                <h2 class="title-h2 activities__title">create or buy</h2>
+                <h2 class="title-h2">create or buy</h2>
                 <div class="activities__wrapper">
                     <div class="activities__item pure-u-xl-2-5">
                         <h3 class="title-h3 activities__subtitle">our store</h3>
@@ -132,7 +132,43 @@
             </div>
         </section>
 
+        <section class="touch">
+            <div class="container">
+                <img src="/src/icons/vase.svg" alt="vase icon" class="touch__vase">
+                <h2 class="title-h2">get in touch</h2>
+                <div class="touch__wrapper">
+                    <img src="/src/img/touch/tea.jpg" alt="tea image" class="pure-u-xl-1-2 touch__img ">
+                    <form action="" class="pure-u-xl-1-2 form touch__form" id="form">
+                        <fieldset class="form__fieldset touch__fieldset">
+                            <label for="name" class="form__label">
+                                Name
+                                <input class="form__input touch__input" name="name" id="name" type="text"
+                                    placeholder="Name">
+                            </label>
 
+                            <label for="email" class="form__label">
+                                Email
+                                <input class="form__input touch__input" name="email" id="email" type="email"
+                                    placeholder="Email">
+                            </label>
+                        </fieldset>
+                        <label for="textarea" class="form__label-textarea touch__label-textarea">
+                            Your question
+                        </label>
+
+                        <textarea class="form__textarea touch__textarea" name="textarea" id="textarea"
+                            placeholder="Question"></textarea>
+                        <span class="errors-container-textarea"></span>
+                        <label for="checkbox" class="form__label-checkbox">
+                            <input class="form__input-checkbox" id="checkbox" type="checkbox">
+                            I agree with the <span>terms</span>
+                        </label>
+                        <span class="errors-container-checkbox"></span>
+                        <button class="btn-send touch__btn">send request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="/src/js/script.js"></script>

@@ -1,0 +1,78 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.form {
+  &__fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  &__label,
+  &__label-checkbox,
+  &__label-textarea {
+    display: block;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--dark);
+    cursor: pointer;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    height: 48px;
+    font-family: var(--second-family);
+    border: 1px solid #e2e1e5;
+    border-radius: 2px;
+    padding: 10px 15px;
+
+    &::placeholder {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 200%;
+      color: var(--ui-disabled);
+    }
+
+    &:hover {
+      border: 1px solid var(--dark);
+    }
+  }
+
+  &__input.just-validate-error-field,
+  &__textarea.just-validate-error-field {
+    border-color: var(--ui-error);
+  }
+
+  &__label-textarea {
+    display: block;
+    margin-top: 10px;
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 132px;
+  }
+
+  &__label-checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      color: #a22dc6;
+      margin-left: 2px;
+    }
+  }
+
+  &__input-checkbox {
+    border: 1px solid var(--dark);
+    border-radius: 2px;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+  }
+}

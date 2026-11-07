@@ -1,8 +1,27 @@
 @use "/src/scss/base/variables.scss" as *;
 @use "/src/scss/base/mixins.scss" as *;
 
-.btn {
+.btn-shop,
+.btn-send,
+.btn-submit,
+.btn-read {
   @include button;
+}
+
+// button shop
+.btn-shop {
+  font-size: 20px;
+
+  &:hover {
+    color: var(--light);
+    background: var(--dark);
+  }
+
+  &:active {
+    color: var(--dark);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    background: rgba(217, 217, 217, 0.1);
+  }
 
   @media screen and (min-width: 360px) {
     width: 230px;
@@ -15,5 +34,61 @@
     min-height: 60px;
     // text
     padding: 18px 10px;
+  }
+}
+
+// button send
+.btn-send {
+  font-size: 16px;
+  padding: 10px;
+  width: 220px;
+  min-height: 40px;
+
+  &:hover {
+    color: var(--ceramic);
+    // border
+    border-color: var(--ceramic);
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--ceramic);
+  }
+
+  &:disabled {
+    border: 1px solid var(--ui-disabled);
+    color: var(--ui-disabled);
+  }
+}
+
+// button submit
+.btn-submit {
+  font-size: 16px;
+  border: 1px solid var(--light);
+  width: 90px;
+  min-height: 40px;
+  padding: 10px 5px;
+
+  &:disabled {
+    color: var(--ui-disabled);
+    border-color: var(--ui-disabled);
+  }
+}
+
+// button read
+.btn-read {
+  width: 145px;
+  min-height: 32px;
+  padding: 8px 10px;
+  font-size: 14px;
+
+  &:hover {
+    color: var(--ceramic);
+    border-color: var(--ceramic);
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--ceramic);
   }
 }
