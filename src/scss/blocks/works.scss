@@ -1,0 +1,137 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.works {
+  background-color: var(--light);
+  padding: 60px 0;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__slider {
+    margin-top: 40px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 340px;
+    max-height: 223px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    &-prev,
+    &-next {
+      display: none;
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 6px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    border-radius: 0;
+    background: var(--dark);
+
+    &-active {
+      background: var(--ceramic);
+    }
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -43px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    &__slider {
+      margin-top: 45px;
+    }
+
+    &__img {
+      max-width: 400px;
+      max-height: 263px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    &__slider {
+      margin-top: 80px;
+    }
+
+    &__wrapper {
+      padding: 0 45px;
+    }
+
+    &__button {
+      &-prev,
+      &-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      &-prev {
+        left: 15px;
+      }
+
+      &-next {
+        right: 15px;
+      }
+    }
+
+    &__img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: -38px;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .works {
+    &__wrapper {
+      padding: 0 85px;
+    }
+
+    &__button {
+      &-prev {
+        left: 42px;
+      }
+
+      &-next {
+        right: 42px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .works {
+    padding: 100px 0;
+  }
+}

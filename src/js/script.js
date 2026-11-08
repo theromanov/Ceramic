@@ -1,4 +1,9 @@
 import JustValidate from "just-validate";
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../scss/style.scss";
 
 // menu
@@ -15,6 +20,35 @@ close.addEventListener("click", () => {
   menu.classList.remove("header__menu_active");
   document.body.style.overflow = "";
 });
+
+try {
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation, Pagination],
+    loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".works__button-next",
+      prevEl: ".works__button-prev",
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 35,
+      },
+    },
+  });
+} catch (e) {}
 
 // form validation
 try {
