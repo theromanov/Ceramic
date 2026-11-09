@@ -58,3 +58,20 @@ html {
     padding: 0 240px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .angle {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+}

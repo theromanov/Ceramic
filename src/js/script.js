@@ -21,6 +21,34 @@ close.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
+//tabs
+const tabs = document.querySelectorAll(".catalog__tab");
+const items = document.querySelectorAll(".catalog__item");
+
+// Початковий стан
+items.forEach((item, index) => {
+  item.style.display = index === 0 ? "flex" : "none";
+});
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("catalog__tab_active");
+    });
+
+    items.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    tab.classList.add("catalog__tab_active");
+
+    if (items[index]) {
+      items[index].style.display = "flex";
+    }
+  });
+});
+
+// slider
 try {
   const swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination],
