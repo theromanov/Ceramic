@@ -127,3 +127,62 @@ try {
         });
     });
 } catch (e) {}
+
+try {
+  const validator = new JustValidate("#footer__form");
+
+  validator
+    .addField(
+      "#footer__form-email",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "email",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+        },
+        {
+          rule: "maxLength",
+          value: 150,
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(
+          ".footer__errors-container-form-email",
+        ),
+      },
+    )
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(
+          ".footer__errors-container-checkbox",
+        ),
+      },
+    )
+    .onSuccess((event) => {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
+} catch (e) {}

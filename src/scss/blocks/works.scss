@@ -2,7 +2,7 @@
 
 .works {
   background-color: var(--light);
-  padding: 60px 0;
+  padding: 60px 0 95px 0;
 
   &__wrapper {
     position: relative;
@@ -70,6 +70,7 @@
 
 @media screen and (min-width: 1200px) {
   .works {
+    padding-top: 90px;
     &__slider {
       margin-top: 80px;
     }
@@ -132,6 +133,6 @@
 
 @media screen and (min-width: 1920px) {
   .works {
-    padding: 100px 0;
+    padding: 100px 0 130px 0;
   }
 }
