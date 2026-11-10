@@ -25,7 +25,6 @@ close.addEventListener("click", () => {
 const tabs = document.querySelectorAll(".catalog__tab");
 const items = document.querySelectorAll(".catalog__item");
 
-// Початковий стан
 items.forEach((item, index) => {
   item.style.display = index === 0 ? "flex" : "none";
 });

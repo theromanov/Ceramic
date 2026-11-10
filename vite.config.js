@@ -5,5 +5,6 @@ export default defineConfig({
   input: {
     main: resolve(import.meta.dirname, "index.html"),
     catalog: resolve(import.meta.dirname, "catalog.html"),
+    blog: resolve(import.meta.dirname, "blog.html"),
   },
 });
