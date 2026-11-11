@@ -23,6 +23,7 @@
 - Asynchronous HTTP POST requests.
 - JSON response handling.
 - Automatic form reset after successful submission.
+- Automatic image optimization during production builds.
 
 ## Technologies
 
@@ -36,6 +37,7 @@
 - **JSON** — response data handling.
 - **Promises** — asynchronous JavaScript operations.
 - **Vite** — development server and build tool.
+- **vite-plugin-imagemin** — automatic image optimization and compression during production builds (JPEG, PNG, and SVG).
 - **Swiper** — interactive image slider.
 - **JustValidate** — client-side form validation.
 - **PostCSS** — CSS processing.
@@ -45,7 +47,7 @@
 
 The contact and newsletter forms use the Fetch API to send POST requests to JSONPlaceholder:
 
-`https://jsonplaceholder.typicode.com/posts`
+[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
 
 The application processes the server response as JSON and resets the form after a successful response.
 
@@ -62,6 +64,10 @@ Validation includes:
 - Email format validation.
 - Message minimum length.
 - Required checkbox confirmation.
+
+## Image Optimization
+
+Image optimization is integrated into the Vite build process using **vite-plugin-imagemin**. JPEG, PNG, and SVG images are automatically optimized during production builds to reduce file sizes and improve website performance.
 
 ## Installation and Setup
 
@@ -90,6 +96,16 @@ Validation includes:
    ```
 
 5. Open the local URL provided by Vite in your browser.
+
+## Production Build
+
+To create an optimized production build, run:
+
+```bash
+npm run build
+```
+
+The generated production files will be available in the `dist` directory.
 
 ## Author
 

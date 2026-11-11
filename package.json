@@ -10,10 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "imagemin-webp": "^8.0.0",
     "postcss": "^8.5.32",
     "postcss-pxtorem": "^6.1.0",
     "sass": "^1.107.1",
-    "vite": "^8.3.6"
+    "vite": "^8.3.6",
+    "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
     "just-validate": "^4.3.0",
